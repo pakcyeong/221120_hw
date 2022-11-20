@@ -1,0 +1,339 @@
+.app{
+    width: 100vw;
+    height: 100vh;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    scroll-snap-type: y mandatory;
+    scroll-behavior: smooth; 
+}
+
+section {
+    width: 100vw;
+    height: 100vh;
+    scroll-snap-align: start;
+    overflow: hidden;
+}
+
+.home { 
+    width: 100vw;
+    height: 100vh;
+    position: relative;
+    background-color: lightblue; 
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    z-index: -1;
+}
+
+.home .txt h1,
+.home .txt p,
+.home .txt .btn {
+    margin-left: 8rem;
+}
+
+.home .txt h1 {
+    color: var(--font-home-h-color);
+    font-size: 5rem;
+}
+
+.home .txt p {
+    color: var(--font-home-p-color);
+    font-size: 1.2rem;
+}
+
+.home img {
+    width: 100%;
+    min-width: 80%;
+    bottom: -22rem;
+    right: -10rem;
+    position: absolute;
+}
+
+.about { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgray; 
+}
+
+.about .exp {
+    width: 70%;
+    height: 70%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    border: 1px solid rgb(200,200,200);
+    border-radius: 20px;
+    background-color: #fff;
+}
+
+.about .exp .subscribe {
+    padding: 2rem;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.about .exp .subscribe > li {
+    list-style: none;
+    width: 24.5rem;
+    height: 35rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 0 1rem;
+    border-left: 1px solid rgb(200, 200, 200);
+}
+.about .exp .subscribe li:first-child { border: 0px; }
+
+.about .exp .subscribe li .userIco {
+    width: 13rem;
+    height: 13rem;
+    overflow: hidden;
+    margin: 0 auto;
+    border-radius: 200px;
+    margin-bottom: 1rem;
+}
+
+.about .exp .subscribe li .userIco img {
+    width: 13rem;
+    height: 13rem;
+    object-fit: cover;
+}
+
+.about .exp .subscribe li > h2,
+.about .exp .subscribe li > .snsIco,
+.about .exp .subscribe li > .device {
+    margin-bottom: 1rem;
+} 
+
+.about .exp .subscribe li .snsIco {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.about .exp .subscribe li .snsIco > li {
+    list-style: none;
+    margin-left: 2rem;
+}
+.about .exp .subscribe li .snsIco > li:first-child { margin: 0; }
+
+.about .exp .subscribe li .snsIco > li a {
+    font-size: 1.2rem;
+    color: black;
+}
+
+.about .exp .subscribe li > .expMsg {
+    width: 80%;
+    border-top: 1px solid grey;
+    padding-top: 1rem;
+    text-align: center;
+}
+
+.portfolio { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightgoldenrodyellow; 
+}
+
+.portfolio .pf-wrap .upbtn .ownr {
+    width: 100rem;
+    height: 40rem;
+    padding: 2rem;
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+.portfolio .pf-wrap .ownr .pf {
+    list-style: none;
+}
+
+.portfolio .pf-wrap .ownr .pf .label-wrap {
+    width: 6rem;
+    height: 3.5rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.portfolio .pf-wrap .ownr .pf .main-itm {
+    width: 100%;
+    height: 35rem;
+    display: none;
+    overflow: hidden;
+}
+
+.portfolio .pf-wrap .ownr .pf label {
+    color: rgb(153, 153, 123);
+    font-weight: bold;
+    text-align: center;
+}
+
+.portfolio .pf-wrap .ownr .pf label:active,
+.portfolio .pf-wrap .ownr .pf label:hover {
+    border-bottom: 2px solid rgb(153, 153, 123);
+}
+
+.portfolio .pf-wrap .ownr .pf input {
+    display: none;
+}
+
+.portfolio .pf-wrap .ownr .pf input:checked + .main-itm {
+    top: 7rem;
+    left: 0;
+    position: absolute;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    font-size: 5rem;
+}
+.portfolio .pf-wrap .ownr .pf .main-itm > picture {
+    width: 20rem;
+    height: 30rem;
+}
+
+.portfolio .pf-wrap .ownr .pf .main-itm img {
+    width: 20rem;
+    height: 30rem;
+    object-fit: cover;
+}
+
+.contact { 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: lightseagreen; 
+}
+
+.contact .mail-wrap {
+    width: 80rem;
+    height: 40rem;
+    box-shadow: 1px 1px 12px rgb(19, 114, 109);
+    display: flex;
+    justify-content: space-between;
+    background-color: rgb(225,221,218);
+}
+
+.contact .mail-wrap picture {
+    width: 40rem;
+    height: 40rem;
+}
+
+.contact .mail-wrap picture img {
+    width: 40rem;
+    height: 40rem;
+    object-fit: cover;
+}
+.contact .mail-wrap .mail ul > li:first-child { margin: 0; }
+.contact .mail-wrap .mail ul > li {
+    list-style: none;
+    margin-top: 1rem;
+}
+
+.contact .mail-wrap .mail ul {
+    width: 38rem;
+    height: 38rem;
+    margin: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: #fff;
+}
+
+.contact .mail-wrap .mail ul .name,
+.contact .mail-wrap .mail ul .phone {
+    width: 20rem;
+    height: 5rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .mail-wrap .mail ul .offer {
+    width: 20rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .mail-wrap .mail ul .name .name-tag,
+.contact .mail-wrap .mail ul .phone .num-tag,
+.contact .mail-wrap .mail ul .director .dir-tag,
+.contact .mail-wrap .mail ul .offer .off-tag {
+    color: rgb(43, 68, 66);
+    font-size: 0.95rem;
+    margin-bottom: 0.5rem;
+}
+
+.contact .mail-wrap .mail ul .phone .num-tag > span,
+.contact .mail-wrap .mail ul .director .dir-tag > span {
+    color: grey;
+    font-size: 0.8rem;
+}
+
+.contact .mail-wrap .mail ul .name input,
+.contact .mail-wrap .mail ul .phone input {
+    height: 3rem;
+    font-size: 1.1rem;
+    padding-left: 1rem;
+    border: 1px solid grey;
+    border-radius: .2rem;
+    outline: none;
+}
+
+.contact .mail-wrap .mail ul .name input:focus,
+.contact .mail-wrap .mail ul .phone input:focus
+.contact .mail-wrap .mail ul .offer input:focus {
+    border: 2px solid lightseagreen;
+}
+
+.contact .mail-wrap .mail ul .director {
+    width: 20rem;
+    height: 3rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+.contact .mail-wrap .mail ul .director .dir-wrap {
+    width: 100%;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+}
+
+.contact .mail-wrap .mail ul .director .dir-wrap *:nth-child(1) { margin: 0; }
+.contact .mail-wrap .mail ul .director .dir-wrap > * {
+    margin-left: 1rem;
+}
+
+.contact .mail-wrap .mail ul .offer .offer {
+    width: 18rem;
+    height: 5rem;
+    font-size: 1.1rem;
+    border: 1px solid grey;
+    border-radius: .2rem;
+    padding: 1rem;
+    outline: none;
+}
+
+.contact .mail-wrap .mail ul .submit-btn input {
+    width: 10rem;
+    height: 3rem;
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    border: 0px;
+    background-color: rgb(48, 132, 129);
+}
+
+.contact .mail-wrap .mail ul .submit-btn input:active {
+    background-color: rgb(52, 167, 163);
+}
