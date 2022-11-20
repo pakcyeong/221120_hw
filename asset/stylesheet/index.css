@@ -289,8 +289,8 @@ section {
 }
 
 .contact .mail-wrap .mail ul .name input:focus,
-.contact .mail-wrap .mail ul .phone input:focus
-.contact .mail-wrap .mail ul .offer input:focus {
+.contact .mail-wrap .mail ul .phone input:focus,
+.contact .mail-wrap .mail ul .offer textarea:focus {
     border: 2px solid lightseagreen;
 }
 
@@ -314,7 +314,7 @@ section {
     margin-left: 1rem;
 }
 
-.contact .mail-wrap .mail ul .offer .offer {
+.contact .mail-wrap .mail ul .offer textarea {
     width: 18rem;
     height: 5rem;
     font-size: 1.1rem;
@@ -322,6 +322,7 @@ section {
     border-radius: .2rem;
     padding: 1rem;
     outline: none;
+    resize: none;
 }
 
 .contact .mail-wrap .mail ul .submit-btn input {
